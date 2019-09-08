@@ -1,25 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-class App extends React.Component {
-  state = {
-    currentName: "Kay"
-  };
+const App = () => {
+  const [currentName, setNameToCassie] = useState("Kay"); // useState() gives back 2 parameters inside an array
+  return (
+    <div className="App">
+      <div>
+        <div>{currentName}</div>
 
-  setNameToCassie = () => this.setState({ currentName: "Cassie" });
-
-  render() {
-    const { currentName } = this.state;
-    return (
-      <div className="App">
-        <div>
-          <div>{currentName}</div>
-
-          <button onClick={this.setNameToCassie}>Set name to Cassie</button>
-        </div>
+        <button onClick={() => setNameToCassie("Cassie")}>
+          Set name to Cassie
+        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default App;
