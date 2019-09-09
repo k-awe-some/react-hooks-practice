@@ -1,21 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+import useFetch from "./effects/use-fetch.effect";
 
 const User = ({ userId }) => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      const res = await fetch(
-        `https://jsonplaceholder.typicode.com/users?id=${userId}`
-      );
-      const users = await res.json();
-      setUser(users[0]);
-    };
-
-    fetchUser();
-  }, [userId]);
-
-  console.log(user);
+  const user = useFetch(
+    `https://jsonplaceholder.typicode.com/users?id=${userId}`
+  );
 
   return (
     <div style={{ width: "50%", textAlign: "left" }}>
