@@ -1,9 +1,28 @@
 .App {
+  padding-top: 30px;
   text-align: center;
   font-size: 25px;
-  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+input {
+  font-size: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.test-queries {
+  color: red;
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.App ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

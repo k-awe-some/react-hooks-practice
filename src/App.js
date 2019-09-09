@@ -1,13 +1,13 @@
 import React from "react";
 
-import User from "./user.component";
-import Post from "./post.component";
+// import User from "./user.component";
+// import Post from "./post.component";
+import UseReducerExample from "./use-reducer-example.component";
 import "./App.css";
 
 const App = () => (
   <div className="App">
-    <User userId={1} />
-    <Post postId={5} />
+    <UseReducerExample />
   </div>
 );
 
